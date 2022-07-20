@@ -1,3 +1,15 @@
+:root {
+  /* setting up color variables */
+  --darkest: rgb(20, 30, 24, 1);
+  --dark: rgb(28, 46, 83);
+  --light: rgb(82, 103, 163);
+  --lightest: rgb(255, 255, 255);
+
+  --bgColor: rgb(112, 125, 160);
+
+
+}
+
 .App {
   text-align: center;
 }
