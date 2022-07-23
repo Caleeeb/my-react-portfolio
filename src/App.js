@@ -1,4 +1,3 @@
-import './App.css';
 import React, { useState } from 'react';
 import Nav from './components/Nav';
 import About from './components/About';
@@ -24,13 +23,13 @@ function App() {
   const handlePage = (page) => setCurrentPage(page);
 
   return (
-    <div className="App">
-      <Nav 
+    <main className="App">
+      <Nav
         setCurrentPage={setCurrentPage}
         currentPage={currentPage}
         handlePage={handlePage}></Nav>
       {choosePage(currentPage)}
-    </div>
+    </main>
   );
 }
 

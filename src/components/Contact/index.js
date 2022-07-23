@@ -1,28 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { validateEmail } from '../../utils/helpers';
 
 function Contact() {
-    return(
-        <div>
-            <section class='container'>
-                <section class='section-name'>Contact Me</section>
-                <article class='contact-articles'>
-                    <p class='contact-p'>
-                        Get in touch with me so we can move forward together.
-                    </p>
-                    <p class='contact-p'>
-                        Check out my projects on <a href="https://github.com/Caleeeb" target="_blank" rel="noreferrer">GitHub</a>
-                    </p>
-                    <p class='contact-p'>
-                        Connect with me on <a href="https://www.linkedin.com/in/caleb-j-day/" target="_blank" rel="noreferrer">LinkedIn</a>
-                    </p>
-                    <p class='contact-p'>
-                        See the coding questions and answers on <a href="https://stackoverflow.com/users/19589970/caleeb" target="_blank" rel="noreferrer">Stack Overflow</a>
-                    </p>
-                </article>
-            </section>
+    const [formState, setFormState] = useState({ name: '', email: '', message: '' });
 
-        </div>
-    )
+    const [errorMessage, setErrorMessage] = useState('');
+    const { name, email, message } = formState;
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!errorMessage) {
+            console.log('Submit Form', formState);
+        }
+    };
+
+    const handleChange = (e) => {
+        if (e.target.name === 'email') {
+            const isValid = validateEmail(e.target.value);
+            if (!isValid) {
+                setErrorMessage('Your email is invalid.');
+            } else {
+                setErrorMessage('');
+            }
+        } else {
+            if (!e.target.value.length) {
+                setErrorMessage(`${e.target.name} is required.`);
+            } else {
+                setErrorMessage('');
+            }
+        }
+        if (!errorMessage) {
+            setFormState({ ...formState, [e.target.name]: e.target.value });
+            console.log('Handle Form', formState);
+        }
+    };
+
+    return (
+        <section>
+            <h1>Contact me</h1>
+            <form id="contact-form">
+                <div>
+                    <label htmlFor="name">Name:</label>
+                    <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
+                </div>
+                <div>
+                    <label htmlFor="email">Email address:</label>
+                    <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
+                </div>
+                <div>
+                    <label htmlFor="message">Message:</label>
+                    <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
+                </div>
+                {errorMessage && (
+                    <div>
+                        <p className="error-text">{errorMessage}</p>
+                    </div>
+                )}
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    );
 }
 
 export default Contact;

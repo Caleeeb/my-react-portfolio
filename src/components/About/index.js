@@ -2,8 +2,8 @@ import React from 'react';
 import myPhoto from '../../images/CalebDay1.jpeg';
 
 function About() {
-    return(
-        <section id="about-me" class="self">
+	return (
+		<section id="about-me" class="self">
 			<div className="self-title">
 				<h2>About Me</h2>
 			</div>
@@ -21,12 +21,12 @@ function About() {
 			<div id="About" className="self-img">
 				<img
 					src={myPhoto}
-                    style={{ width: "60%" }}
+					style={{ width: "60%" }}
 					alt="Caleb Day giving a classic double thumbs up."
 				/>
 			</div>
 		</section>
-    )
+	)
 }
 
 export default About;
