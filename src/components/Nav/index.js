@@ -30,6 +30,11 @@ function Nav(props) {
               Contact Me
             </a>
           </li>
+          <li className="mx-2">
+            <a data-testid="portfolio" href="https://caleeeb.github.io/module2-portfolio/assets/Resume%202021.pdf" target="_blank">
+              My Portfolio
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
