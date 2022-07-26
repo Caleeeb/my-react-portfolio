@@ -3,7 +3,7 @@ import myPhoto from '../../images/CalebDay1.jpeg';
 
 function About() {
 	return (
-		<section id="about-me" class="self">
+		<section id="about-me" className="container">
 			<div className="self-title">
 				<h2>About Me</h2>
 			</div>
@@ -21,7 +21,7 @@ function About() {
 			<div id="About" className="self-img">
 				<img
 					src={myPhoto}
-					style={{ width: "60%" }}
+					style={{ width: "100%" }}
 					alt="Caleb Day giving a classic double thumbs up."
 				/>
 			</div>

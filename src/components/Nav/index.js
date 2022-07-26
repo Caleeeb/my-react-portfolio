@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
+import React from 'react';
 
 function Nav(props) {
   const {
@@ -8,7 +7,7 @@ function Nav(props) {
 
 
   return (
-    <header className="flex-row px-1">
+    <header className="flex-row px-1 myb-1">
       <h2>
         <a data-testid="link" href="/">
         </a>
@@ -31,7 +30,7 @@ function Nav(props) {
             </a>
           </li>
           <li className="mx-2">
-            <a data-testid="portfolio" href="https://caleeeb.github.io/module2-portfolio/assets/Resume%202021.pdf" target="_blank">
+            <a data-testid="portfolio" href="https://caleeeb.github.io/module2-portfolio/assets/Resume%202021.pdf" target="_blank" rel="noreferrer">
               My Portfolio
             </a>
           </li>
