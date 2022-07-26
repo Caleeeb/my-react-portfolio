@@ -16,11 +16,11 @@
 
 <h2 id='description'> Description </h2>
 
-This is my portfolio. Read bout my journey in web devolpment, look at my projects I've made, access my resume, and have an easy way contact me.
+This is my portfolio. Read about my journey in web devolpment, look at the projects I've made, access my resume, and get an easy way contact me.
 
 A live link to my website:
 
-[My Portfolio](https://drive.google.com/file/d/1n8JH2iikzqOabDGzV83kHyIGHbVheeNo/view)
+[My Portfolio](https://caleeeb.github.io/my-react-portfolio/)
 
 
 ![Work Day Scheduler](src/images/portfolioSS.png)
