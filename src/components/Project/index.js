@@ -44,7 +44,7 @@ function Project() {
 
         <div className='container jobs'>
             {projects.map((project, i) => (
-                <a className='project-link' href={project.link} target="_blank" rel="noreferrer" key={i}>
+                <a className='project-link' href={project.link} target="_blank" rel="noopener noreferrer" key={i}>
 
                     <div className="mx-1 my-1 project">
                         <div className='capition'>
